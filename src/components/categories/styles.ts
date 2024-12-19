@@ -4,10 +4,11 @@ import { style } from "../loading/styles";
 
 export const s = StyleSheet.create({
     container:{
-        maxHeight:36,
+      
+        maxHeight:10,
         position:"absolute",
         zIndex:1,
-        top:64,
+        top:32,
         gap:8
     },
     content:{

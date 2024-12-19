@@ -1,16 +1,32 @@
 import { View,Text,Alert, } from "react-native"
 import { api } from "@/services/api"
 import { useEffect,useState } from "react"
-import { Categories,categoriesProps } from "@/components/categories"
+import MapView, {Callout,Marker} from "react-native-maps"
+
 
 import { PlaceProps } from "@/components/place"
 import { Places } from "@/components/places"
+import { Categories,categoriesProps } from "@/components/categories"
+import { InfoBallon } from "@/components/InfoBallon"
+import { navigate } from "expo-router/build/global-state/routing"
+import { router, Router } from "expo-router"
 
-type MarketsProps = PlaceProps
+
+type MarketsProps = PlaceProps & {
+    latitude:number,
+    longitude:number
+}
+
+const currentLocation = {
+    latitude: -23.561187293883442,
+    longitude: -46.656451388116494
+}
+
+
 
 export default function home (){
 
- const [categories,setCategories] = useState <categoriesProps> ([])
+ const [categories,setCategories] = useState <categoriesProps>([])
  const [category,setCategory] = useState <string> ("") 
  const [markets,setMarkets] = useState <MarketsProps[]>()
 
@@ -48,12 +64,54 @@ export default function home (){
     
     useEffect(()=> {FetchCategories()},[])
 
+
     useEffect(()=> {FetchMarkets()},[category])
+
+  if(!markets){
+    return
+  }
 
     return (
   
-        <View style={{flex:1,backgroundColor:"#cececece"}}>
+        <View style={{flex:1,backgroundColor:'#252829'}}>
+             
              <Categories data={categories} onSelected={setCategory}  selected={category}/>
+
+             <MapView style={{flex:10}}  initialRegion={{ 
+                latitude: currentLocation.latitude,
+                longitude: currentLocation.longitude,
+                latitudeDelta:0.01,
+                longitudeDelta: 0.01
+               }}>
+                <Marker identifier="current" coordinate={{
+                    latitude:currentLocation.latitude,
+                    longitude:currentLocation.longitude
+                }}
+                image={require("@/assets/location.png")}    
+
+                />
+                
+                {markets?.map ((item)=>(
+                        <Marker
+                        key={item.id}
+                        identifier={item.id}
+                        coordinate={{
+                            latitude:item.latitude,
+                            longitude:item.longitude
+                        }}
+                        image={require("@/assets/pin.png")}
+                        >
+                            <Callout onPress={() => router.navigate (`/market/${item.id}`)} >
+                                      <InfoBallon name={item.name} adress={item.address} />
+                            </Callout>
+                        </Marker>
+                    ))}
+                    
+            </MapView>
+            
+             
+                                  
+             
              <Places data={markets}/>
         </View>
     )
