@@ -24,9 +24,11 @@ export function Categories ({data,selected,onSelected}:props) {
        isSelected={item.id === selected}
         />
     )}
-       horizontal
-       contentContainerStyle={s.container}
-       showsHorizontalScrollIndicator={false}
+    
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={s.content}
+      style={s.container}
 
        />
     )

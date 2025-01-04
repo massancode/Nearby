@@ -1,4 +1,4 @@
-import { View,Text,Alert, } from "react-native"
+import { View,Text,Alert,StatusBar } from "react-native"
 import { api } from "@/services/api"
 import { useEffect,useState } from "react"
 import MapView, {Callout,Marker} from "react-native-maps"
@@ -72,17 +72,22 @@ export default function home (){
   }
 
     return (
-  
-        <View style={{flex:1,backgroundColor:'#252829'}}>
-             
-             <Categories data={categories} onSelected={setCategory}  selected={category}/>
+        
+        <View style={{flex:1}}>
 
-             <MapView style={{flex:10}}  initialRegion={{ 
+             <StatusBar barStyle={"default"} backgroundColor={"black"}/>
+            
+             <Categories data={categories} onSelected={setCategory}  selected={category}   />
+
+             <MapView  style={{flex:1}}   initialRegion={{ 
                 latitude: currentLocation.latitude,
                 longitude: currentLocation.longitude,
                 latitudeDelta:0.01,
                 longitudeDelta: 0.01
                }}>
+                
+            
+
                 <Marker identifier="current" coordinate={{
                     latitude:currentLocation.latitude,
                     longitude:currentLocation.longitude
@@ -113,6 +118,7 @@ export default function home (){
                                   
              
              <Places data={markets}/>
+             
         </View>
     )
 

@@ -1,18 +1,14 @@
-import { StyleSheet } from "react-native";
-import { style } from "../loading/styles";
-
+import { StyleSheet } from "react-native"
 
 export const s = StyleSheet.create({
-    container:{
-      
-        maxHeight:10,
-        position:"absolute",
-        zIndex:1,
-        top:32,
-        gap:8
-    },
-    content:{
-        gap:8,
-        paddingHorizontal:24
-    }
-});
+  container: {
+    maxHeight: 36,
+    position: "absolute",
+    zIndex: 1,
+    top: 64,
+  },
+  content: {
+    gap: 8,
+    paddingHorizontal: 24,
+  },
+})

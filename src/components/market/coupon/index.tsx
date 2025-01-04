@@ -15,7 +15,10 @@ export function Coupon({code}:Props){
           <View style={s.container}>
                <Text style={s.title}> Utilize esse cupom </Text>
 
-          <View style={} ></View>     
+          <View style={s.concent} >
+              <IconTicket size={24} color={colors.green.light}  />
+              <Text style={s.code} >{code}</Text>
+          </View>     
           </View>
 
     )
