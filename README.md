@@ -1,7 +1,5 @@
 
-<h1 align="center">
-  <img alt="Nearby" height="80" title="Nearby App" src="assets/images/adaptive-icon.png" />
-</h1>
+
 
 
 ![cover](assets/images/splash-icon.png )
@@ -69,8 +67,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
       <img alt="Tarefa Adicionada" src="covers_for_git/3- end.estabelicimento.jpeg" width="200px">
       <p>Endereço dos Estabelecimento</p>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <img alt="Tarefa Concluída" src="covers_for_git/4-est.lista.jpeg" width="200px">
       <p>Lista de estabelecimentos</p>
@@ -83,6 +79,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
       <img alt="Tela de Confirmação" src="covers_for_git/6- lendoqrcode.jpeg" width="200px">
       <p>Lendo QR Code</p>
     </td>
+    </tr>
+    <tr>
     <td align="center">
       <img alt="Tela de Confirmação" src="covers_for_git/7-confirmandocupon.jpeg" width="200px">
       <p>Tela de Confirmação</p>
