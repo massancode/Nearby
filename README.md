@@ -1,8 +1,9 @@
 
+<h1 align="center">
+  <img alt="Todo" height="80" title="Todo App" src="covers_for_git/logo.png" />
+</h1>
 
-
-
-![cover](assets/images/splash-icon.png )
+![cover](covers_for_git/COVER%20GRANDE.png )
 
 ## 💻 Projeto
 
@@ -65,7 +66,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
     </td>
     <td align="center">
       <img alt="Tarefa Adicionada" src="covers_for_git/3- end.estabelicimento.jpeg" width="200px">
-      <p>Endereço dos Estabelecimento</p>
+      <p>Endereço dos Estabelecimentos</p>
     </td>
     <td align="center">
       <img alt="Tarefa Concluída" src="covers_for_git/4-est.lista.jpeg" width="200px">
