@@ -1,10 +1,10 @@
 
 <h1 align="center">
-  <img alt="Nearby" height="80" title="Nearby App" src="assets/images/splash-icon.png" />
+  <img alt="Nearby" height="80" title="Nearby App" src="assets/images/adaptive-icon.png" />
 </h1>
 
 
-![cover](assets/images/adaptive-icon.png)
+![cover](assets/images/splash-icon.png )
 
 ## 💻 Projeto
 
